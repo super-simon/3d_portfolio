@@ -37,10 +37,12 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leadint-[30px]"
       >
-        I&apos;m a Web developer with eperience in TypeScript and JavaScript and
-        frameworks like React, Node.js (Nest.js), Three.js and databases. I
-        architect efficient, scalale, and user-friendly solutions that solve
-        real-world problems. Let&apos; work together to bring our ideas to life!
+        I&apos;m a Web developer with experience in TypeScript, JavaScript,
+        frameworks like React, Node.js (Nest.js), Three.js and databases. I also
+        configure Linux servers for the backend part of the application using
+        docker or without. I architect efficient, scalale, and user-friendly
+        solutions that solve real-world problems. Let&apos; work together to
+        bring our ideas to life!
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
