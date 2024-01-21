@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { services } from "../constants";
