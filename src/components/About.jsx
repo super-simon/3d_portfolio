@@ -42,8 +42,8 @@ const About = () => {
         I&apos;m a Web developer with experience in TypeScript, JavaScript,
         frameworks like React, Node.js (Nest.js), Three.js and databases. I also
         configure Linux servers for the backend part of the application using
-        docker or without. I architect efficient, scalale, and user-friendly
-        solutions that solve real-world problems. Let&apos; work together to
+        docker or without. I architect efficient, scalable, and user-friendly
+        solutions that solve real-world problems. Let&apos;s work together to
         bring our ideas to life!
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
