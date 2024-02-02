@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unknown-property */
 import { motion } from "framer-motion";
 import { testimonials } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -52,7 +54,11 @@ const Feedbacks = () => {
       </div>
       <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
         {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.key} index={index} {...testimonial} />
+          <FeedbackCard
+            key={testimonial.testimonial}
+            index={index}
+            {...testimonial}
+          />
         ))}
       </div>
     </div>
