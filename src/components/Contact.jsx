@@ -1,9 +1,9 @@
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
-import Earth from "./canvas/Earth";
 import EarthCanvas from "./canvas/Earth";
 
 const Contact = () => {
@@ -11,8 +11,43 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .send(
+        "service_4pcdi1m",
+        "template_7szbrcr",
+        {
+          from_name: form.name,
+          to_name: "Oleksandr",
+          from_email: form.email,
+          to_email: "oleksandr.v.stetsiuk@gmail.com",
+          message: form.message,
+        },
+        "BuF-Ut6syNnmb6yf3"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank You! I will get back to you as soon as possible.");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("Something went wrong. Please try again.");
+        }
+      );
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">

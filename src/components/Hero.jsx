@@ -18,7 +18,7 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I develop online web applications <br className="sm:block hidden" />{" "}
-            for various needs.
+            for various purposes.
           </p>
         </div>
       </div>
